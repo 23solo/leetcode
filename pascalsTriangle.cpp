@@ -17,12 +17,12 @@ typedef pair<int,int> pi;
 
 vll generate_pascal_row(int n){
 	vll temp;
-	ll numerator = 1, denominator= 1;
+	ll numerator = 1;
 	temp.push_back(1);
 	FOR(i, n){
 		numerator *= n-i;
-		denominator *= i+1;
-		temp.push_back(numerator/ denominator);
+		numerator /= i+1;
+		temp.push_back(numerator);
 	}
 	return temp;
 }
