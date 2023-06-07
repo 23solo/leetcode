@@ -12,7 +12,7 @@ typedef pair<int,int> pi;
 #define S second
 #define PB push_back
 #define MP make_pair
-
+#define FOR(i, N) for(int i =0; i<N; i++) 
 
 void solve()
 {
