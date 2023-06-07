@@ -15,9 +15,27 @@ typedef pair<int,int> pi;
 #define MP make_pair
 #define FOR(i, N) for(int i =0; i<N; i++) 
 
+ll max_subarray(vll arr, int n){
+	ll sum = arr[0], max_sum = arr[0];
+	FOR(i, n){
+		if (i == 0){
+			continue;
+		}
+		sum = max(arr[i], sum+arr[i]);
+    max_sum = max(sum, max_sum);
+	}
+	return max_sum;
+}
+
 void solve()
 {
-  cout<<"sol";
+  int n;
+  cin>>n;
+  vll arr(n);
+  FOR(i, n){
+	  cin>>arr[i];
+  }
+  cout<<max_subarray(arr, n);
 }
 
 int main() {
