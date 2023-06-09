@@ -5,13 +5,12 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<long long> vll;
 typedef pair<int,int> pi;
-typedef vector<vector<int> > vvi;
 
 #define F first
 #define S second
 #define PB push_back
 #define MP make_pair
-#define FOR(i, N) for(int i =0; i<N; i++)
+#define FOR(i, N) for(int i =0; i<N; i++) 
 
 void solve()
 {
