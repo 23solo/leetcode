@@ -1,9 +1,9 @@
 #!/bin/sh
 # Deletes files created by c++ compiler
-for file in *; 
-    do if [[ ! "$file" == *.cpp ]]; then 
+for file in */*; do
+    if [[ ! "$file" == *.cpp ]]; then 
         if [[ -f "$file.cpp" ]] ; then
-            rm $file
+            rm "$file"
         fi;
     fi; 
 done
