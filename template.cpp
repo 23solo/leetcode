@@ -5,6 +5,7 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<long long> vll;
 typedef pair<int,int> pi;
+typedef vector<vector<int> > vvi;
 
 #define F first
 #define S second
