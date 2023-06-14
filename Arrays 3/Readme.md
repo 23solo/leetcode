@@ -13,3 +13,7 @@
 
   - Now after the entire binary exponentiation is complete and nn becomes zero, check if n is a negative value we know the answer will be 1 by and.
 
+* Majority element n/2
+  - We maintain a counter and the element, idea is if an element is present > n/2 times it means count of that element will cancel out all other elements count.
+  - And at the end the counter will be 1 with the element present in `ele` variable.
+  
