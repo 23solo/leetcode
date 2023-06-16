@@ -19,3 +19,9 @@
 
 * Majority element n/3
   - It's same as before but in this case we can have max 2 elements that can fullfill the criteria so now we maintain two counter and two variables instead of 1.
+
+* Grid Uniq Paths
+  -  If we observe examples there is a similarity in paths from start to end. Each time we are taking an exactly m+n-2 number of steps to reach the end.
+  - From start to reach the end we need a certain number of rightward directions and a certain number of downward directions. So we can figure out we need n-1 no. of rightward direction and m-1 no. of downward direction to reach the endpoint.
+  - Since we need an m+n-2 number of steps to reach the end among those steps if we choose n-1 rightward direction or m-1 downward direction and calculate the combinations ( ie: m+n-2Cn-1 or m+n-2Cm-1) we’ll get the total number of paths.
+
