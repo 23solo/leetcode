@@ -17,4 +17,18 @@
   - Finally, we will have a list of unique quadruplets.
 
 * Longest Consecutive Sequence
-  - We will first push all elements in the HashSet. Then we will run a for loop and check for any number(x) if it is the starting number of the consecutive sequence by checking if the HashSet contains (x-1) or not. If ‘x’ is the starting number of the consecutive sequence we will keep searching for the numbers y = x+1, x+2, x+3, ….. And stop at the first ‘y’ which is not present in the HashSet. Using this we can calculate the length of the longest consecutive subsequence. 
+  - We will first push all elements in the HashSet. Then we will run a for loop and check for any number(x) if it is the starting number of the consecutive sequence by checking if the HashSet contains (x-1) or not. If ‘x’ is the starting number of the consecutive sequence we will keep searching for the numbers y = x+1, x+2, x+3, ….. And stop at the first ‘y’ which is not present in the HashSet. Using this we can calculate the length of the longest consecutive subsequence.
+
+* Longest SubArray with 0 sum
+  - First, let us initialize a variable say sum = 0 which stores the sum of elements traversed so far and another variable says max = 0 which stores the length of the longest subarray with sum zero.
+  - Declare a HashMap<Integer, Integer> which stores the prefix sum of every element as a key and its index as a value.
+  - Now traverse the array, and add the array element to our sum. 
+  - (i)  If sum = 0, then we can say that the subarray until the current index has a sum = 0, -   so we update max with the maximum value of (max, current_index+1)
+
+  - (ii)  If the sum is not equal to zero then we check the hashmap if we’ve seen a subarray with this sum before
+
+  - if HashMap contains sum -> this is where the above-discussed case occurs (subarray with equal sum), so we update our max 
+
+  - else -> Insert (sum, current_index) into hashmap to store prefix sum until the current index
+
+  - After traversing the entire array our max variable has the length of the longest substring having a sum equal to zero, so return max.
