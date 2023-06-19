@@ -32,3 +32,8 @@
   - else -> Insert (sum, current_index) into hashmap to store prefix sum until the current index
 
   - After traversing the entire array our max variable has the length of the longest substring having a sum equal to zero, so return max.
+
+* Count number of subarrays with given xor K
+  - We'll store all the xor in a map along with number of times they occur {4, 7} -> This means 4 occurs 7 times before.
+  - Now at index i if our xor is `x` and we are looking for `K` this `x` can be turned to `k` if previously we've seen a number that is `x ^ K` if mp[x^K] exists then we can make this index as `K`.
+  - Intuition `x^K = xr` , `x^k^k = xr^k` => `x = xr^k`
