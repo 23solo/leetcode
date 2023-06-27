@@ -79,7 +79,7 @@ void solve()
 {
   ListNode *list = addNode();
 
-  cout << detectCycle(list)->data;
+  cout << detectCycle(list)->val;
 }
 
 int main()
